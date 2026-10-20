@@ -1,0 +1,96 @@
+
+# Exercise 01 — IPv4 Addressing
+
+## Objective
+
+Learn how IPv4 addresses, subnet masks, and default gateways work.
+
+## 1. What is an IPv4 Address?
+
+An IPv4 address identifies a network interface using a
+32-bit address, commonly written as four decimal octets.
+
+Example:
+
+`192.168.1.25`
+
+## 2. What is a Subnet Mask?
+
+A subnet mask identifies which bits belong to the network
+portion and which bits belong to the host portion.
+
+Example:
+
+`255.255.255.0` = `/24`
+
+## 3. Example Network
+
+| Parameter | Value |
+|---|---|
+| IP Address | `192.168.1.25` |
+| Subnet Mask | `255.255.255.0` |
+| Network Address | `192.168.1.0` |
+| Broadcast Address | `192.168.1.255` |
+| Usable Host Range | `192.168.1.1 - 192.168.1.254` |
+
+These are illustrative values for a conventional `/24`
+subnet, not the configuration of a real device.
+
+## 4. Windows Lab
+
+Open PowerShell and run:
+
+```powershell
+ipconfig
+```
+
+For more details:
+
+```powershell
+ipconfig /all
+```
+
+Record the IPv4 address, subnet mask, and default gateway
+for your active network adapter.
+
+## 5. Linux Lab
+
+Open a terminal and run:
+
+```bash
+ip addr
+```
+
+Check the routing table:
+
+```bash
+ip route
+```
+
+The `default via` entry usually identifies the default
+gateway for the relevant route.
+
+## 6. What I Learned
+
+- An IPv4 address identifies a network interface.
+- A subnet mask defines the network prefix.
+- A default gateway provides a route to other networks.
+- Windows and Linux offer different tools to inspect
+  network configuration.
+
+## 7. Results
+
+Complete this section after performing the lab.
+
+- Operating system:
+- IPv4 address:
+- Subnet mask or prefix:
+- Default gateway:
+- Observations:
+
+Do not publish public IP addresses or other sensitive
+network information in this repository.
+
+## Status
+
+Exercise: In progress
