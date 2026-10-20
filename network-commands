@@ -1,0 +1,85 @@
+
+# Exercise 02 — Network Commands
+
+## Windows
+
+### Check IP configuration
+
+```powershell
+ipconfig /all
+```
+
+### Test connectivity
+
+```powershell
+ping 8.8.8.8
+```
+
+### Test DNS resolution
+
+```powershell
+nslookup example.com
+```
+
+### Display the route
+
+```powershell
+tracert example.com
+```
+
+## Linux
+
+### Show IP addresses
+
+```bash
+ip addr
+```
+
+### Show routes
+
+```bash
+ip route
+```
+
+### Test connectivity
+
+```bash
+ping -c 4 8.8.8.8
+```
+
+### Test DNS resolution
+
+```bash
+nslookup example.com
+```
+
+### Trace the network route
+
+```bash
+tracepath example.com
+```
+
+## Troubleshooting Notes
+
+If a command fails:
+
+1. Check whether the network interface is connected.
+2. Verify the IP address and default route.
+3. Test connectivity to a known IP address.
+4. Test DNS resolution separately.
+5. Consider firewall rules and network restrictions.
+
+A failed ping does not always mean the network is down:
+ICMP traffic may be blocked by a firewall.
+
+## Comparison
+
+| Task | Windows | Linux |
+|---|---|---|
+| IP configuration | `ipconfig` | `ip addr` |
+| Routing table | `route print` | `ip route` |
+| DNS lookup | `nslookup` | `nslookup` |
+| Route tracing | `tracert` | `tracepath` |
+| Connectivity test | `ping` | `ping` |
+
+Some Linux commands require additional packages.
