@@ -1,0 +1,75 @@
+
+# Exercise 03 — Network Troubleshooting
+
+## Scenario 1: No Internet Connection
+
+### Step 1 — Check the interface
+
+Windows:
+
+```powershell
+ipconfig
+```
+
+Linux:
+
+```bash
+ip addr
+```
+
+### Step 2 — Check the default route
+
+Windows:
+
+```powershell
+route print
+```
+
+Linux:
+
+```bash
+ip route
+```
+
+### Step 3 — Test IP connectivity
+
+```text
+ping 8.8.8.8
+```
+
+Linux users can limit the test:
+
+```bash
+ping -c 4 8.8.8.8
+```
+
+### Step 4 — Test DNS
+
+```text
+nslookup example.com
+```
+
+## How to Interpret Results
+
+- No valid IP configuration: investigate the interface
+  and DHCP configuration.
+- No default route: check gateway and network settings.
+- IP connectivity works but DNS fails: investigate DNS.
+- All tests fail: inspect connectivity, routing, and
+  firewall rules before drawing conclusions.
+
+## Lab Report
+
+- Problem observed:
+- Commands executed:
+- Results:
+- Root cause, if identified:
+- Solution:
+- Lessons learned:
+
+## Important
+
+These tests are diagnostic examples. Results depend on
+the network, firewall, operating system, and environment.
+Do not change production network settings without
+authorization.
